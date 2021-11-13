@@ -1,0 +1,62 @@
+
+Some notes:
+- All dataset classes should be iterables that return articles in order of date. Don't all have
+to implement filtering, really only necessary for Nela2017 cause it's so large
+- Should only load the actual article text when a specific element is accessed, and should give
+an Article instance
+
+
+
+/data
+	/nela2017.py
+		class NelaDataset
+			# filter by timeframe
+			# filter by organization
+			-----------------------------------
+			# filter by day of week?
+			# sorting?
+			
+		# leave for now
+		class Article:
+			def sentiment(word)
+			def plot_etc.
+	/covid.py
+	/biden.py
+
+
+/utils
+	/text
+		/analysis
+			def sentiment(text)
+			def collocation(term, text)  # last
+			
+		/preprocessing
+			def strip_punctuation
+			def strip_stopwords
+	/plotting.py
+		def word_cloud(*texts)
+		def box_and_whisker(*data_1D)
+		def frequency_chart( ...?)
+		
+/scripts
+	download_extract_Nela2017.py
+	download_biden.py
+	download_covid.py
+
+/notebooks
+# importing from the other stuff
+# where we actually do the "analysis"
+
+
+	/feature_distribution for CNN vs Fox
+		- if time, top 10 most "represented" news outlets in nela2017
+	/sentiment analysi for CNN vs Fox:
+		- Trump in Nela dataset
+		- Biden in Biden dataset
+		- Covid in Covid dataset
+		# for all analyses
+			- box and whisker
+			- pos-neg-neut bar chart
+			- plot scores/probability
+
+	
