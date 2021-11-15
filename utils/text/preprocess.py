@@ -21,16 +21,16 @@ def strip_stopwords(text, stopwords=None,tokenized = True):
     :rtype: str, or list, ...
     """
     
-    if(stopwords == None): 
+    if stopwords is None:   # null condition should always be "if _ is None:"
       stopwords = nltk_sw.words('english')
       
       
-    if(isinstance(text,str)):
+    if isinstance(text,str):
       text_tokens = word_tokenize(text)
       remove_sw = [word for word in text_tokens if not word in stopwords]  
       return remove_sw if tokenized else " ".join(remove_sw)
 
-    if(isinstance(text,list)):
+    if isinstance(text,list):
       res = []
       for sent in text:
           text_tokens = word_tokenize(sent)

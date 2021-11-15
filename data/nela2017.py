@@ -21,6 +21,13 @@ class Nela2017(Sequence):
         """
 
 
+    def __getitem__(self, item):
+        # TODO implement __getitem__
+
+        pass
+
+    def __len__(self):  ...
+
 
     
 
