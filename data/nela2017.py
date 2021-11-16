@@ -62,8 +62,13 @@ class Nela2017:
                     self._iters.append(dir_iter)
                 except FileNotFoundError:
                     continue
-
-        self._cur_iter = self._iters.pop(0)
+        try:
+            self._cur_iter = self._iters.pop(0)
+        except IndexError:  # in the case of the dataset being completely empty
+            def empty_gen():  # this is very hacky but gets the job done
+                yield
+            self._cur_iter = empty_gen()
+            next(self._cur_iter)
         return self
 
     def __next__(self):
@@ -167,14 +172,18 @@ class Nela2017:
 
 if __name__ == '__main__':
     dataset = Nela2017("C:/Users/alexander.paskal/projects/news-bias-analysis/NELA2017")
-    # dataset.dates(dt.date(2017,4,1), dt.datetime(2017,6,30))
+    dataset.dates(dt.date(2017,4,1), dt.datetime(2017,6,30))
     dataset.organizations("CNN")
 
-    from utils.text.analysis import sentiment
+    from nltk.sentiment import SentimentIntensityAnalyzer
     import statistics
     import string
     from scipy.stats import ttest_ind
-    
+
+
+    def sentiment(text):
+        sia = SentimentIntensityAnalyzer()
+        return sia.polarity_scores(text)
     
     def strip_stopwords(text):
         old_text = text.split()
