@@ -66,3 +66,25 @@ def strip_punctuation(text, symbols=None, tokenized = True):
       return res
     
 
+def preprocess(text,tokenized = True, lower = False):
+    '''
+    Combines lower, strip punctuation, and strip stop words in one function
+    param: text
+    type: str, list of str
+    return preprocessed text
+    '''
+    
+    if(isinstance(text,str)):
+        if(lower):text = text.lower()
+        stripped = strip_punctuation(text,tokenized=False)
+        return strip_stopwords(stripped,tokenized = tokenized)
+        
+    if(isinstance(text,list)):
+      res = []
+      for sent in text:
+          if(lower): sent = sent.lower()
+          stripped = strip_punctuation(sent,tokenized=False)
+          stripped = strip_stopwords(stripped,tokenized = tokenized)
+          res.append(stripped)
+      return res
+
