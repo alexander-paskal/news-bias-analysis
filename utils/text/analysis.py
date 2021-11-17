@@ -15,6 +15,7 @@ from nltk.collocations import BigramCollocationFinder
 from nltk.metrics import BigramAssocMeasures
 from nltk.corpus import stopwords
 
+
 def sentiment(text):
     """
     Performs a sentiment analysis

@@ -98,9 +98,9 @@ class Nela2017:
         a = Article(
             id=id,
             path=path,
-            title=title,
             org=orgdir,
-            date=date
+            date=date,
+            title=title
         )
         return a
 
@@ -171,7 +171,7 @@ class Nela2017:
 
 
 if __name__ == '__main__':
-    dataset = Nela2017("C:/Users/alexander.paskal/projects/news-bias-analysis/NELA2017")
+    dataset = Nela2017("C:/Users/alexander.paskal/datasets/NELA2017")
     dataset.dates(dt.date(2017,4,1), dt.datetime(2017,6,30))
     dataset.organizations("CNN")
 
@@ -210,13 +210,13 @@ if __name__ == '__main__':
         except:
             pass
         i += 1
-        if i == 500:
+        if i == 100:
             break
 
     dataset.organizations("FOX NEWS")
     fox_data = []
     fox_pos = []
-    from utils.text.analysis import sentiment
+    # from utils.text.analysis import sentiment
     i = 0
     for article in dataset:
         try:
