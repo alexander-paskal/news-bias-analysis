@@ -32,7 +32,7 @@ class Article:
         :rtype:
         """
         if self._text is None:
-            self._read_json()
+            self.read_json()
 
         return self._text
 
