@@ -27,6 +27,7 @@ import os
 import calendar
 import copy
 import datetime as dt
+import pandas as pd
 from data.article import Article
 
 
@@ -164,4 +165,23 @@ class Nela2017:
             yield start_date
             start_date += delta
 
+    def list(self):
+        """
+        Returns the articles as a list, ordered by dates
+        :return:
+        :rtype:
+        """
+        return [article for article in self]
 
+    def df(self):
+        """
+        Returns a dataframe of all articles
+        :return:
+        :rtype:
+        """
+        records = []
+        for article in self:
+            article.read_json()
+            records.append(article.serialize())
+
+        return pd.DataFrame(records)

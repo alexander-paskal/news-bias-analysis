@@ -18,7 +18,7 @@ class Article:
     _author: str = None
     _read: bool = False
 
-    def _read_json(self):
+    def read_json(self):
         with open(self.path, "r", encoding="utf-8") as f:
             content = json.load(f)
             self._text = content["content"]
@@ -39,6 +39,9 @@ class Article:
     @property
     def author(self):
         if self._author is None:
-            self._read_json()
+            self.read_json()
 
         return self._author
+
+    def serialize(self):
+        return asdict(self)
