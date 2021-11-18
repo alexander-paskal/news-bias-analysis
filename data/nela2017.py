@@ -45,8 +45,15 @@ class Nela2017:
         self._organizations = set()
 
     def __iter__(self):
-        self._iters = []
+        self._iter = self._article_paths()
+        return self
 
+    def _article_paths(self):
+        """
+        Generator yielding all article paths in the current dataset
+        :return:
+        :rtype:
+        """
         for date in self._date_range:
             monthdir, daydir = self._datedir(date)
 
@@ -58,35 +65,23 @@ class Nela2017:
             for org in orgs:
                 dirpath = self._path(monthdir, daydir, org)
                 try:
-                    dir_iter = os.scandir(dirpath)
-                    self._iters.append(dir_iter)
+                    for path in os.listdir(dirpath):
+                        yield self._path(monthdir, daydir, org, path)
+
                 except FileNotFoundError:
                     continue
-        try:
-            self._cur_iter = self._iters.pop(0)
-        except IndexError:  # in the case of the dataset being completely empty
-            def empty_gen():  # this is very hacky but gets the job done
-                yield
-            self._cur_iter = empty_gen()
-            next(self._cur_iter)
-        return self
 
     def __next__(self):
         try:
-            path = next(self._cur_iter).path
+            path = next(self._iter)
             return self._article(path)
         except StopIteration:
-            if len(self._iters) > 0:
-                self._cur_iter = self._iters.pop(0)
-                path = next(self._cur_iter).path
-                return self._article(path)
-            else:
-                raise StopIteration
+            raise StopIteration
 
     def __len__(self):
         dataset = copy.deepcopy(self)
         dataset.__iter__()
-        return sum([len(list(iter)) for iter in dataset._iters])
+        return len(list(self._iter))
 
     def _article(self, path):
         path = os.path.normpath(path)
