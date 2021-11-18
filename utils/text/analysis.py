@@ -14,7 +14,7 @@ from transformers import pipeline
 from nltk.collocations import BigramCollocationFinder
 from nltk.metrics import BigramAssocMeasures
 from nltk.corpus import stopwords
-
+import nltk 
 
 def sentiment(text):
     """
@@ -42,3 +42,7 @@ def collocation(text):
     :rtype: list[tuple]
     """
     # TODO implement collocation
+    bigram_measures = nltk.collocations.BigramAssocMeasures()
+    tokens = nltk.wordpunct_tokenize(text)
+    finder = BigramCollocationFinder.from_words(tokens)
+    return finder.nbest(bigram_measures.likelihood_ratio, 10)
