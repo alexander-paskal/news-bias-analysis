@@ -44,4 +44,10 @@ class Article:
         return self._author
 
     def serialize(self):
-        return asdict(self)
+        """
+        Returns all "public" attributes in a dictionary
+        :return:
+        :rtype:
+        """
+        attrs = asdict(self)
+        return {k: v for k,v in attrs.items() if not k.startswith("_")}
