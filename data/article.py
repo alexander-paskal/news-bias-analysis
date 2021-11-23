@@ -50,4 +50,7 @@ class Article:
         :rtype:
         """
         attrs = asdict(self)
-        return {k: v for k,v in attrs.items() if not k.startswith("_")}
+        attrs = {k: v for k, v in attrs.items() if not k.startswith("_")}
+        attrs["text"] = self.text
+        attrs["author"] = self.author
+        return attrs

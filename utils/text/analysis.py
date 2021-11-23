@@ -16,6 +16,7 @@ from nltk.metrics import BigramAssocMeasures
 from nltk.corpus import stopwords
 import nltk 
 
+
 def sentiment(text):
     """
     Performs a sentiment analysis
@@ -27,11 +28,12 @@ def sentiment(text):
     :rtype: float
     """
     sentiment_analysis = pipeline("sentiment-analysis",model="siebert/sentiment-roberta-large-english")
-    result = sentiment_analysis('Trump is a racist!')[0]
+    result = sentiment_analysis(text)[0]
     if result['label'] == 'NEGATIVE':
         return -result['score']
     else:
         return result['score']
+
 
 def collocation(text):
     """
