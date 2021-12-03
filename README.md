@@ -1,7 +1,7 @@
-# news-bias-analysis
+# News Bias Analysis
 ## An analysis of bias in the News, particularly focused on CNN vs Fox reporting during the early Trump era. 
 
-### introduction
+### Introduction
 
 Some people read only from certain news sources, but each news source has its own biases.
 We hope to reveal such biases for notable news outlets such as CNN and Fox News.
@@ -21,13 +21,7 @@ Alternatively, if you prefer to use pip, run the following from the command prom
 
 
 ### Running Analysis
-
-biden_sentiment.ipynb: sentiment analysis for news related to biden in CNN news and Fox news.
-covid_sentiment.ipynb: sentiment analysis for news related to covid in CNN news and Fox news.
-nela_eda.ipynb: introduction of the Nela2017 dataset and visualization.
-nela_features.ipynb: the readability anaysis for Nela2017.
-nela_ngram.ipynb, nela_sentiment.ipynb: the sentiment analysis and its visualization for Nela2017.
-wordclouds.ipynb: the visualization for the common words for each topic from each news provider.
+To see our analysis summary for this project, please take a look at plots.ipynb
 
 ### Project Organization
 
@@ -37,21 +31,14 @@ wordclouds.ipynb: the visualization for the common words for each topic from eac
     ├── data
     │   ├── article.py     <- Data Structure for online scraped news.
     │   └── nela2017.py    <- Loading Nela2017 data and some preprocessing.
+    │   └── txt files      <- biden,covid articles extracted from Fox or CNN
+    ├── utils              <- top folder containing basic text analysis/preprocessing and plotting
+    │   ├── plotting       <- Contains a file with plotting functions
+    │   └──  text          <- Contains files for preprocessing and analyzing text
+    │   
+    ├── gather_recent_news.py  <- gather news from online with specific news provider and topic   
     │
-    ├── scripts             
-    │   └── _gather_news_data_.py  <- gather news from online with specific news provider and topic
-    │
-    │
-    ├── notebooks          
-    │   ├── ArticleEDA.ipynb
-    │   ├── biden_sentiment.ipynb
-    │   ├── covid_sentiment.ipynb
-    │   ├── nela_eda.ipynb
-    │   ├── nela_features.ipynb
-    │   ├── nela_ngram_seaborn.ipynb
-    │   ├── nela_ngram.ipynb
-    │   ├── nela_sentiment.ipynb
-    │   └── wordclouds.ipynb
+    ├── plots.ipynb <- Summary of our analysis
     │
     │
     └── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
