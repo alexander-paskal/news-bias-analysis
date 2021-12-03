@@ -7,7 +7,7 @@ Some people read only from certain news sources, but each news source has its ow
 We hope to reveal such biases for notable news outlets such as CNN and Fox News.
 Our goal is to make readers appreciate the biases in the different news articles and to be appropriately skeptical.
 
-### Dependency and Installatioin
+### Dependency and Installation
 
 
 For this project, we used an anaconda environment (3.8). We would recommend to do the following. To create the environment locally,
