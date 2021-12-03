@@ -23,6 +23,9 @@ Alternatively, if you prefer to use pip, run the following from the command prom
 ### Running Analysis
 To see our analysis summary for this project, please take a look at plots.ipynb
 
+## Visualization
+![alt text](https://github.com/alexander-paskal/news-bias-analysis/blob/main/data/wordcloud.png)
+
 ### Project Organization
 
 
