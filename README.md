@@ -74,14 +74,14 @@ Our analyses are synthesized and visualized in the 'plots.ipynb' jupyter noteboo
 
 ![alt text](https://github.com/alexander-paskal/news-bias-analysis/blob/main/data/wordcloud.png?style=centerme)<br>
 
-*Word Cloud of FOX news in 2017*<br>
+*Word Cloud of FOX news in 2017. Trump dominated the headlines*<br>
 ![alt text](https://github.com/alexander-paskal/news-bias-analysis/blob/main/images/polarity.png?style=centerme)<br>
 
-*Polarity distribution of CNN, BBC and FOX*<br>
+*Polarity distribution of CNN, BBC and FOX for sentences referencing 'trump'. As can be seen, polarity was remarkably similar across all three organizations.*<br>
 
 ![alt text](https://github.com/alexander-paskal/news-bias-analysis/blob/main/images/difficulty.png?style=centerme)<br>
 
-*TTR(a difficulty measure) distribution of CNN, BBC and FOX*
+*TTR(a difficulty measure) distribution of CNN, BBC and FOX. BBC clearly used more elevated language with consistency.*
 
 
 
