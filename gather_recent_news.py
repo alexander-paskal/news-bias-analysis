@@ -60,7 +60,7 @@ def make_text_files(newsource: str, topic: str):
                 html = requests.get(u)
                 soup = BeautifulSoup(html.text, "html.parser")
                 paragraphs = soup.find_all(class_='zn-body__paragraph') 
-                file_name = f"cnn_{topic}.txt"
+                file_name = f"data/cnn_{topic}.txt"
                 with open(file_name, 'a') as f:
                     for p in paragraphs:
                         f.write(p.get_text()+ "\n")
@@ -75,7 +75,7 @@ def make_text_files(newsource: str, topic: str):
             soup = BeautifulSoup(html.text, "html.parser")
             paragraphs = soup.find_all('p') 
             p_len = len(paragraphs)
-            file_name = f"foxnews_{topic}.txt"
+            file_name = f"data/foxnews_{topic}.txt"
             with open(file_name, 'a') as f:
                     cur_paragraph = 0
                     for p in paragraphs:
