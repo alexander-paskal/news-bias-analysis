@@ -24,9 +24,16 @@ We also scraped news articles from October 2021 and performed similar analyses, 
 
 
 Our analyses are synthesized and visualized in the 'plots.ipynb' jupyter notebook. Here are a couple of highlights:
+![alt text](https://github.com/alexander-paskal/news-bias-analysis/blob/main/data/wordcloud.png?style=centerme)<br>
 
-ZHENG - you can put the plots here
+*Word Cloud of FOX news in 2017*<br>
+![alt text](https://github.com/alexander-paskal/news-bias-analysis/blob/main/images/polarity.png?style=centerme)<br>
 
+*Polarity distribution of CNN, BBC and FOX*<br>
+
+![alt text](https://github.com/alexander-paskal/news-bias-analysis/blob/main/images/difficulty.png?style=centerme)<br>
+
+*TTR(a difficulty measure) distribution of CNN, BBC and FOX*
 
 ### Dependency and Installation
 
@@ -41,15 +48,14 @@ Alternatively, if you prefer to use pip, run the following from the command prom
 	>>> pip install -r requirements.txt 
 
 
-<<<<<<< HEAD
-=======
+
 ### Running Analysis
 To see our analysis summary for this project, please take a look at plots.ipynb
 
-## Visualization
-![alt text](https://github.com/alexander-paskal/news-bias-analysis/blob/main/data/wordcloud.png)
 
->>>>>>> 6e68874db8da58620986b4a22d45d714460ea85e
+
+
+
 ### Project Organization
 
 
