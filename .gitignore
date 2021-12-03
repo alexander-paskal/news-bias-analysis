@@ -3,6 +3,7 @@
 __pycache__.
 .idea
 
+notebooks/sentiment_df.csv
 
 #Alex
 covid_dataset/
