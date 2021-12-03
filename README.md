@@ -40,9 +40,8 @@ To see our analysis summary for this project, please take a look at plots.ipynb
     │
     ├── plots.ipynb <- Summary of our analysis
     │
-    │
-    └── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
-                             generated with `pip install requirements.txt`
+    │__ environment.yml    <- The .yml file for creating the conda environment necessary to reproduce the results
+    └── requirements.txt   <- The requirements file for installing with pip
 
 
 
