@@ -7,6 +7,27 @@ Some people read only from certain news sources, but each news source has its ow
 We hope to reveal such biases for notable news outlets such as CNN and Fox News.
 Our goal is to make readers appreciate the biases in the different news articles and to be appropriately skeptical.
 
+To this end, we perform a variety of analyses of news articles from two different periods. These analyses employ a variety of 
+natural language techniques to extract valuable insights about the content, style, and intent of the text being analyzed.
+
+
+### Data
+
+
+We use the NELA2017 dataset, which accumulates thousands of news articles from nearly 100 different news organizations over a 7-month
+period in 2017. Citations and links to the dataset and accompanying article can be found below.
+
+We also scraped news articles from October 2021 and performed similar analyses, in order to extract insights about the news coverage of more (at the time of writing) recent events.
+
+
+### Results
+
+
+Our analyses are synthesized and visualized in the 'plots.ipynb' jupyter notebook. Here are a couple of highlights:
+
+ZHENG - you can put the plots here
+
+
 ### Dependency and Installation
 
 
@@ -19,9 +40,6 @@ Alternatively, if you prefer to use pip, run the following from the command prom
 
 	>>> pip install -r requirements.txt 
 
-
-### Running Analysis
-To see our analysis summary for this project, please take a look at plots.ipynb
 
 ### Project Organization
 
