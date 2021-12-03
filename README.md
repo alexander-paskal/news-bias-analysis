@@ -11,22 +11,6 @@ To this end, we perform a variety of analyses of news articles from two differen
 natural language techniques to extract valuable insights about the content, style, and intent of the text being analyzed.
 
 
-### Data
-
-
-We use the NELA2017 dataset, which accumulates thousands of news articles from nearly 100 different news organizations over a 7-month
-period in 2017. Citations and links to the dataset and accompanying article can be found below.
-
-We also scraped news articles from October 2021 and performed similar analyses, in order to extract insights about the news coverage of more (at the time of writing) recent events.
-
-
-### Results
-
-
-Our analyses are synthesized and visualized in the 'plots.ipynb' jupyter notebook. Here are a couple of highlights:
-
-ZHENG - you can put the plots here
-
 
 ### Dependency and Installation
 
@@ -41,15 +25,7 @@ Alternatively, if you prefer to use pip, run the following from the command prom
 	>>> pip install -r requirements.txt 
 
 
-<<<<<<< HEAD
-=======
-### Running Analysis
-To see our analysis summary for this project, please take a look at plots.ipynb
 
-## Visualization
-![alt text](https://github.com/alexander-paskal/news-bias-analysis/blob/main/data/wordcloud.png)
-
->>>>>>> 6e68874db8da58620986b4a22d45d714460ea85e
 ### Project Organization
 
 
@@ -72,7 +48,24 @@ To see our analysis summary for this project, please take a look at plots.ipynb
 
 
 
---------
+### Data
+
+
+We use the NELA2017 dataset, which accumulates thousands of news articles from nearly 100 different news organizations over a 7-month
+period in 2017. Citations and links to the dataset and accompanying article can be found below.
+
+We also scraped news articles from October 2021 and performed similar analyses, in order to extract insights about the news coverage of more (at the time of writing) recent events.
+
+
+### Results
+
+
+Our analyses are synthesized and visualized in the 'plots.ipynb' jupyter notebook. Here are a couple of highlights:
+
+
+![alt text](https://github.com/alexander-paskal/news-bias-analysis/blob/main/data/wordcloud.png)
+
+
 
 ### Citation
 
