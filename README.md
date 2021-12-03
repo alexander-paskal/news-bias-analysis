@@ -10,7 +10,7 @@ Our goal is to make readers appreciate the biases in the different news articles
 ### Dependency and Installatioin
 
 ```
-pip install requirements.txt
+pip install requirements.txt 
 ```
 
 ### Running Analysis
