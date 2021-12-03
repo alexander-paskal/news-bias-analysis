@@ -9,9 +9,16 @@ Our goal is to make readers appreciate the biases in the different news articles
 
 ### Dependency and Installatioin
 
-```
-pip install requirements.txt 
-```
+
+For this project, we used an anaconda environment (3.8). We would recommend to do the following. To create the environment locally,
+run the following from the anaconda prompt:
+
+	>>>  conda env create --name your-env --file=environments.yml
+
+Alternatively, if you prefer to use pip, run the following from the command prompt:
+
+	>>> pip install -r requirements.txt 
+
 
 ### Running Analysis
 
