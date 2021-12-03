@@ -47,17 +47,6 @@ Alternatively, if you prefer to use pip, run the following from the command prom
     └── requirements.txt   <- The requirements file for installing with pip
 
 
-
-### Data
-
-
-We use the NELA2017 dataset, which accumulates thousands of news articles from nearly 100 different news organizations over a 7-month
-period in 2017. Citations and links to the dataset and accompanying article can be found below.
-
-We also scraped news articles from October 2021 and performed similar analyses, in order to extract insights about the news coverage of more (at the time of writing) recent events.
-
-
-
 ### Data
 
 
