@@ -41,6 +41,15 @@ Alternatively, if you prefer to use pip, run the following from the command prom
 	>>> pip install -r requirements.txt 
 
 
+<<<<<<< HEAD
+=======
+### Running Analysis
+To see our analysis summary for this project, please take a look at plots.ipynb
+
+## Visualization
+![alt text](https://github.com/alexander-paskal/news-bias-analysis/blob/main/data/wordcloud.png)
+
+>>>>>>> 6e68874db8da58620986b4a22d45d714460ea85e
 ### Project Organization
 
 
