@@ -12,7 +12,7 @@ natural language techniques to extract valuable insights about the content, styl
 
 
 
-### Dependency and Installation
+### Dependencies and Installation
 
 
 For this project, we used an anaconda environment (3.8). We would recommend to do the following. To create the environment locally,
@@ -57,13 +57,31 @@ period in 2017. Citations and links to the dataset and accompanying article can 
 We also scraped news articles from October 2021 and performed similar analyses, in order to extract insights about the news coverage of more (at the time of writing) recent events.
 
 
+
+### Data
+
+
+We use the NELA2017 dataset, which accumulates thousands of news articles from nearly 100 different news organizations over a 7-month
+period in 2017. Citations and links to the dataset and accompanying article can be found below.
+
+We also scraped news articles from October 2021 and performed similar analyses, in order to extract insights about the news coverage of more (at the time of writing) recent events.
+
+
 ### Results
 
 
 Our analyses are synthesized and visualized in the 'plots.ipynb' jupyter notebook. Here are a couple of highlights:
 
+![alt text](https://github.com/alexander-paskal/news-bias-analysis/blob/main/data/wordcloud.png?style=centerme)<br>
 
-![alt text](https://github.com/alexander-paskal/news-bias-analysis/blob/main/data/wordcloud.png)
+*Word Cloud of FOX news in 2017*<br>
+![alt text](https://github.com/alexander-paskal/news-bias-analysis/blob/main/images/polarity.png?style=centerme)<br>
+
+*Polarity distribution of CNN, BBC and FOX*<br>
+
+![alt text](https://github.com/alexander-paskal/news-bias-analysis/blob/main/images/difficulty.png?style=centerme)<br>
+
+*TTR(a difficulty measure) distribution of CNN, BBC and FOX*
 
 
 
