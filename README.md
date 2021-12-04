@@ -47,17 +47,6 @@ Alternatively, if you prefer to use pip, run the following from the command prom
     └── requirements.txt   <- The requirements file for installing with pip
 
 
-
-### Data
-
-
-We use the NELA2017 dataset, which accumulates thousands of news articles from nearly 100 different news organizations over a 7-month
-period in 2017. Citations and links to the dataset and accompanying article can be found below.
-
-We also scraped news articles from October 2021 and performed similar analyses, in order to extract insights about the news coverage of more (at the time of writing) recent events.
-
-
-
 ### Data
 
 
@@ -74,14 +63,14 @@ Our analyses are synthesized and visualized in the 'plots.ipynb' jupyter noteboo
 
 ![alt text](https://github.com/alexander-paskal/news-bias-analysis/blob/main/data/wordcloud.png?style=centerme)<br>
 
-*Word Cloud of FOX news in 2017*<br>
+*Word Cloud of FOX news in 2017. Trump dominated the headlines*<br>
 ![alt text](https://github.com/alexander-paskal/news-bias-analysis/blob/main/images/polarity.png?style=centerme)<br>
 
-*Polarity distribution of CNN, BBC and FOX*<br>
+*Polarity distribution of CNN, BBC and FOX for sentences referencing 'trump'. As can be seen, polarity was remarkably similar across all three organizations.*<br>
 
 ![alt text](https://github.com/alexander-paskal/news-bias-analysis/blob/main/images/difficulty.png?style=centerme)<br>
 
-*TTR(a difficulty measure) distribution of CNN, BBC and FOX*
+*TTR(a difficulty measure) distribution of CNN, BBC and FOX. BBC clearly used more elevated language with consistency.*
 
 
 
